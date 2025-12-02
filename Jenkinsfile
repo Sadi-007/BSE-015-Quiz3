@@ -1,9 +1,10 @@
 pipeline {
     agent any
+
     stages {
         stage('Run Python') {
             steps {
-                bat 'python script.py'
+                bat '"C:\\Windows\\System32\\cmd.exe" /c py script.py'
             }
         }
     }
