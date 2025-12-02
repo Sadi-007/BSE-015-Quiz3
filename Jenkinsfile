@@ -1,13 +1,12 @@
 pipeline {
     agent any
-
     stages {
-        stage('Compile Java') {
+        stage('Compile') {
             steps {
                 bat 'javac Hello.java'
             }
         }
-        stage('Run Java') {
+        stage('Run') {
             steps {
                 bat 'java Hello'
             }
