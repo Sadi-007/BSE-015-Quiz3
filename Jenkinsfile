@@ -1,14 +1,15 @@
 pipeline {
     agent any
+
     stages {
         stage('Compile') {
             steps {
-                bat 'javac Hello.java'
+                bat '"C:\\Windows\\System32\\cmd.exe" /c javac Hello.java'
             }
         }
         stage('Run') {
             steps {
-                bat 'java Hello'
+                bat '"C:\\Windows\\System32\\cmd.exe" /c java Hello'
             }
         }
     }
