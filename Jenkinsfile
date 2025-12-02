@@ -2,14 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Compile') {
+        stage('Run Python') {
             steps {
-                bat 'C:\\Windows\\System32\\cmd.exe /c javac Hello.java'
-            }
-        }
-        stage('Run') {
-            steps {
-                bat 'C:\\Windows\\System32\\cmd.exe /c java Hello'
+                bat 'C:\\Windows\\System32\\cmd.exe /c python script.py'
             }
         }
     }
