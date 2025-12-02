@@ -1,16 +1,20 @@
 pipeline {
     agent any
 
+    environment {
+        COMSPEC = 'C:\\Windows\\System32\\cmd.exe'
+    }
+
     stages {
         stage('Compile Java') {
             steps {
-                bat 'C:\\Windows\\System32\\cmd.exe /c javac Hello.java'
+                bat 'javac Hello.java'
             }
         }
 
         stage('Run Java') {
             steps {
-                bat 'C:\\Windows\\System32\\cmd.exe /c java Hello'
+                bat 'java Hello'
             }
         }
     }
