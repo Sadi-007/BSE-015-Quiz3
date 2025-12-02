@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Run Python') {
             steps {
-                powershell '"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "py script.py"'
+                bat 'C:\\Windows\\System32\\cmd.exe /c py script.py'
             }
         }
     }
