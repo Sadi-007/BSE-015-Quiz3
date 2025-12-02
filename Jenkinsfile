@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                powershell '"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "javac Hello.java"'
+                bat 'C:\\Windows\\System32\\cmd.exe /c javac Hello.java'
             }
         }
         stage('Run') {
             steps {
-                powershell '"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "java Hello"'
+                bat 'C:\\Windows\\System32\\cmd.exe /c java Hello'
             }
         }
     }
